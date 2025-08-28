@@ -1,0 +1,66 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.paokentin</groupId>
+  <artifactId>PaoKentin</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>PaoKentin</name>
+  <description>Sistema de notificações PãoKentin</description>
+
+  <properties>
+    <java.version>22</java.version>
+    <spring.boot.version>3.2.6</spring.boot.version>
+  </properties>
+
+  <dependencies>
+    <!-- Web -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>${spring.boot.version}</version>
+    </dependency>
+
+    <!-- JDBC -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-jdbc</artifactId>
+      <version>${spring.boot.version}</version>
+    </dependency>
+
+    <!-- H2 -->
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <version>2.2.224</version>
+      <scope>runtime</scope>
+    </dependency>
+
+    <!-- Força Logback compatível com SLF4J 2.x -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.4.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-api</artifactId>
+      <version>2.0.9</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.11.0</version>
+        <configuration>
+          <source>22</source>
+          <target>22</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
